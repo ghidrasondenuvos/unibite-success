@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniBite - Food Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <h1>UniBite</h1>
+        <div class="user-info">
+            Χρήστης: <strong>student_john</strong> | Credits: <strong id="nav-credits" class="credits-text">5</strong>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <nav class="tabs">
+            <button id="btn-feed" class="btn active">Διαθέσιμα Γεύματα</button>
+            <button id="btn-create" class="btn">Προσφορά Φαγητού</button>
+        </nav>
+
+        <div id="notification" class="hidden" style="margin-bottom: 20px; padding: 15px; border-radius: 8px; text-align: center; font-family: var(--font-mono); font-weight: bold;"></div>
+
+        <section id="view-feed" class="view">
+            <h2 style="color: white; margin-bottom: 20px;">Τι υπάρχει διαθέσιμο;</h2>
+            
+            <div id="ads-grid" class="grid-container">
+                <p style="color: rgba(255,255,255,0.6);">Φόρτωση δεδομένων...</p>
+            </div>
+        </section>
+
+        <section id="view-create" class="view hidden">
+            <div class="form-card">
+                <h2 style="color: var(--primary-color); margin-top: 0;">Μοίρασε το φαγητό σου</h2>
+                <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 25px;">
+                    Μαγείρεψες παραπάνω; Κράτα μια μερίδα για σένα και πρόσφερε τις υπόλοιπες στους συμφοιτητές σου!
+                </p>
+
+                <form id="create-ad-form">
+                    <input type="text" id="ad-title" placeholder="Τι μαγείρεψες; (π.χ. Παστίτσιο)" required>
+                    <input type="number" id="ad-portions" placeholder="Αριθμός Διαθέσιμων Μερίδων" min="1" required>
+                    <input type="text" id="ad-allergens" placeholder="Αλλεργιογόνα (π.χ. Γαλακτοκομικά)">
+                    <input type="text" id="ad-location" placeholder="Σημείο Παραλαβής (π.χ. Εστίες, Κτίριο Β)" required>
+                    
+                    <button type="submit" class="btn btn-primary">Δημοσίευση Γεύματος</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
