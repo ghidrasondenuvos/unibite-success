@@ -1,0 +1,34 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2026-06-10 22:50:30
+count workspace : c:\xampp\htdocs\unibite
+total files : 13
+total code lines : 1853
+total comment lines : 54
+total blank lines : 157
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |            236|              7|             59|     13|
+   |          .json|            992|              0|              0|     54|
+   |          .html|             88|              0|             12|    4.7|
+   |            .js|            350|             37|             57|     19|
+   |           .css|            187|             10|             29|     10|
+   -------------------------------------------------------------------------
+.gitattributes, code is 2, comment is 0, blank is 0.
+.gitignore, code is 1, comment is 0, blank is 0.
+LICENSE, code is 219, comment is 3, blank is 47.
+package-lock.json, code is 966, comment is 0, blank is 0.
+package.json, code is 26, comment is 0, blank is 0.
+public\app.js, code is 242, comment is 16, blank is 30.
+public\assets\bell.png, it is a binary file.
+public\assets\logo.png, it is a binary file.
+public\assets\tree.jpg, it is a binary file.
+public\index.html, code is 88, comment is 0, blank is 12.
+public\style.css, code is 187, comment is 10, blank is 29.
+server.js, code is 108, comment is 21, blank is 27.
+TEKT, code is 14, comment is 4, blank is 12.
+===============================================================================

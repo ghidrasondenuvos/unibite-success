@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniBite - Premium Food Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="auth-section" class="auth-wrapper">
+        <div class="auth-card">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="color: white; margin: 0; font-size: 2.5rem; letter-spacing: 1px;">
+                    <span style="color: var(--primary);">[Uni</span>Bite]
+                </h1>
+                <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 5px;">Φοιτητικό Food Sharing</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button id="tab-login" class="auth-tab active">ΣΥΝΔΕΣΗ</button>
+                <button id="tab-register" class="auth-tab">ΕΓΓΡΑΦΗ</button>
+            </div>
+
+            <div id="auth-notification" class="auth-alert hidden"></div>
+
+            <form id="login-form">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="login-username" placeholder="π.χ. student_john" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-auth btn-primary-auth">ΕΙΣΟΔΟΣ</button>
+            </form>
+
+            <form id="register-form" class="hidden">
+                <div class="input-group">
+                    <label>Επιθυμητό Username</label>
+                    <input type="text" id="reg-username" placeholder="π.χ. maria99" required>
+                </div>
+                <div class="input-group">
+                    <label>Κωδικός Ασφαλείας</label>
+                    <input type="password" id="reg-password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-auth btn-secondary-auth">ΔΗΜΙΟΥΡΓΙΑ ΛΟΓΑΡΙΑΣΜΟΥ</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="main-app" class="hidden">
+        <header class="navbar">
+            <h1>[UniBite]</h1>
+            <div class="user-info" style="display: flex; align-items: center; gap: 15px;">
+                <span><span style="color:#94a3b8">USER:</span> <strong id="nav-username">...</strong></span>
+                <span><span style="color:#94a3b8">CREDITS:</span> <strong id="nav-credits" class="credits-text">...</strong></span>
+                <button id="btn-logout" class="btn btn-danger" style="padding: 5px 10px; font-size: 0.8rem; width: auto; margin: 0;">LOGOUT</button>
+            </div>
+        </header>
+
+        <main class="container">
+            <nav class="tabs">
+                <button id="btn-feed" class="btn active">1. ΔΙΑΘΕΣΙΜΑ ΓΕΥΜΑΤΑ</button>
+                <button id="btn-create" class="btn">2. ΠΡΟΣΦΟΡΑ ΦΑΓΗΤΟΥ</button>
+                <button id="btn-mymeals" class="btn">3. ΤΑ ΓΕΥΜΑΤΑ ΜΟΥ (ΑΞΙΟΛΟΓΗΣΗ)</button>
+            </nav>
+
+            <div id="notification" class="hidden" style="margin-bottom: 25px; padding: 15px; border-radius: 8px; text-align: center; font-weight: bold; border: 1px solid rgba(255,255,255,0.2);"></div>
+
+            <section id="view-feed" class="view">
+                <div id="ads-grid" class="grid-container"></div>
+            </section>
+
+            <section id="view-create" class="view hidden">
+                <div class="form-card">
+                    <h2 style="color: var(--primary); margin-top: 0;">> INIT_NEW_MEAL</h2>
+                    <form id="create-ad-form">
+                        <input type="text" id="ad-title" placeholder=">_ Τίτλος (π.χ. Παστίτσιο)" required>
+                        <input type="number" id="ad-portions" placeholder=">_ Διαθέσιμες Μερίδες (Αριθμός)" min="1" required>
+                        <input type="text" id="ad-allergens" placeholder=">_ Αλλεργιογόνα (Προαιρετικό)">
+                        <input type="text" id="ad-location" placeholder=">_ Τοποθεσία (π.χ. Εστίες)" required>
+                        <button type="submit" class="btn btn-primary">ΕΚΤΕΛΕΣΗ (ΔΗΜΟΣΙΕΥΣΗ)</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="view-mymeals" class="view hidden">
+                <h2 style="color: var(--warning); border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px;">> ΙΣΤΟΡΙΚΟ ΠΑΡΑΓΓΕΛΙΩΝ & ΑΞΙΟΛΟΓΗΣΕΙΣ</h2>
+                <div id="mymeals-grid" class="grid-container">
+                    <p style="color: rgba(255,255,255,0.5);">Δεν υπάρχουν αιτήματα ακόμα...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -6,3 +6,22 @@ http://localhost/unibite/
 
 setup einai auto
 http://localhost/phpmyadmin/
+
+
+
+pleon neoS
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+npm init -y
+npm install express mysql2
+
+
+
+//gia na treksei
+node server.js
+
+xammp start MYSQL
+http://localhost/phpmyadmin/ (apache)
+unibite_db
+
+laragon/start all/database/ερωτημα/νεο ερωτημα/play(μπλε)/refresh(πρασινο)

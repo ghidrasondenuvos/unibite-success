@@ -134,3 +134,93 @@ input:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 10px 
 
 .hidden { display: none !important; }
 .badge { background: rgba(255,255,255,0.1); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; color: #94a3b8; }
+
+/* ========================================== */
+/* AUTHENTICATION PAGE (LOGIN / REGISTER)     */
+/* ========================================== */
+.auth-wrapper {
+    position: fixed; /* Πιάνει όλη την οθόνη */
+    top: 0; left: 0; width: 100%; height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    z-index: 1000;
+}
+
+.auth-card {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(139, 92, 246, 0.2);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Η νέον γραμμή στο πάνω μέρος της κάρτας */
+.auth-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 5px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.auth-tabs {
+    display: flex;
+    background: rgba(0,0,0,0.3);
+    border-radius: 12px;
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.auth-tab {
+    flex: 1; padding: 10px; background: transparent; border: none;
+    color: #94a3b8; font-family: var(--font-mono); font-weight: bold;
+    border-radius: 8px; cursor: pointer; transition: all 0.3s;
+}
+
+.auth-tab.active {
+    background: var(--secondary); color: white;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+}
+
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label {
+    display: block; color: #cbd5e1; font-size: 0.85rem; margin-bottom: 8px; font-weight: bold;
+}
+.input-group input {
+    width: 100%; padding: 14px; background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1); border-radius: 10px;
+    color: white; font-family: var(--font-mono); transition: all 0.3s; box-sizing: border-box;
+}
+.input-group input:focus {
+    border-color: var(--primary); background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); outline: none;
+}
+
+.btn-auth {
+    width: 100%; padding: 15px; border: none; border-radius: 10px;
+    font-family: var(--font-mono); font-weight: bold; font-size: 1rem;
+    cursor: pointer; transition: all 0.3s; text-transform: uppercase; letter-spacing: 1px;
+}
+.btn-primary-auth { background: var(--primary); color: #000; box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4); }
+.btn-primary-auth:hover { background: #34d399; transform: translateY(-2px); }
+.btn-secondary-auth { background: var(--secondary); color: white; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.4); }
+.btn-secondary-auth:hover { background: #a78bfa; transform: translateY(-2px); }
+
+/* Το εφέ κουνήματος όταν υπάρχει σφάλμα */
+.auth-alert {
+    padding: 12px; border-radius: 8px; font-size: 0.9rem; margin-bottom: 20px;
+    text-align: center; font-weight: bold; font-family: var(--font-mono);
+}
+.shake-animation { animation: shake 0.4s ease-in-out; }
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}

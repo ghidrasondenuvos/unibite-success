@@ -1,0 +1,125 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "c:\\xampp\\htdocs\\unibite",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2026-06-10 22:50:30",
+            "filesum": 13,
+            "codesum": 1853,
+            "commentsum": 54,
+            "blanksum": 157,
+            "statistics": {
+                "": {
+                    "code": 236,
+                    "comment": 7,
+                    "blank": 59
+                },
+                ".json": {
+                    "code": 992,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".html": {
+                    "code": 88,
+                    "comment": 0,
+                    "blank": 12
+                },
+                ".js": {
+                    "code": 350,
+                    "comment": 37,
+                    "blank": 57
+                },
+                ".css": {
+                    "code": 187,
+                    "comment": 10,
+                    "blank": 29
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 2,
+                    "comment": 0,
+                    "filename": ".gitattributes"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 47,
+                    "code": 219,
+                    "comment": 3,
+                    "filename": "LICENSE"
+                },
+                {
+                    "blank": 0,
+                    "code": 966,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 26,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 30,
+                    "code": 242,
+                    "comment": 16,
+                    "filename": "public\\app.js"
+                },
+                {
+                    "filename": "public\\assets\\bell.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "public\\assets\\logo.png",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "filename": "public\\assets\\tree.jpg",
+                    "isbinaryfile": true,
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0
+                },
+                {
+                    "blank": 12,
+                    "code": 88,
+                    "comment": 0,
+                    "filename": "public\\index.html"
+                },
+                {
+                    "blank": 29,
+                    "code": 187,
+                    "comment": 10,
+                    "filename": "public\\style.css"
+                },
+                {
+                    "blank": 27,
+                    "code": 108,
+                    "comment": 21,
+                    "filename": "server.js"
+                },
+                {
+                    "blank": 12,
+                    "code": 14,
+                    "comment": 4,
+                    "filename": "TEKT"
+                }
+            ]
+        }
+    ]
+}
